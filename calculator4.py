@@ -52,4 +52,4 @@ class main(calculator):
                 continue
             cal.FinalCalc(op)
 
-# main()
+main()
