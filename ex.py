@@ -80,15 +80,83 @@
 
 # keymap(key1)
 
-def cube(x):
-   r=x**3
-   return r
+# def cube(x):
+#    r=x**3
+#    return r
 
 
+# # a = 330
+# # b = 330
 
-   
+# # if a > b:
+# #    print("A")
+# # else:
+# #  print("=")
+# #  if a == b:
+# #    pass 
+# #  else:
+# #   print("B")
 
 
+# # txt = "The price is {} dollars"
+# # print(txt.format('34'))
+
+
+class Parent():
+   def __init__(self,name,age ):
+      self.attr1= name
+      self.attr2 = age
+      
+
+   def display1(self,name,age):
+      print("fname and age are ",name,age)
+
+# chld=Parent('steve','34')  
+# chld.display()       
+
+class Child(Parent):
+   def __init__(self, lname,name,age):
+      self.attr3=lname
+      super().__init__(name,age) # Parent.__init__(self, name,age)      
+         
+   def display(self): 
+      super().display1(self.attr1,self.attr2) # Parent.display1(self, self.attr1,self.attr2)
+      print("full name and age is :",self.attr1,self.attr3,"and",self.attr2)
+
+     
+s=input("enter name :")
+b=input("enter age :")
+c=input("enter last name :")       
+
+obj=Child(c,s,b)
+obj.display()
+obj.display1("Jonathan",20)
+
+
+# chld=Parent(s,b)
+# chld.display()
+
+# class Person:
+#   def __init__(self, fname, lname):
+#     self.firstname = fname
+#     self.lastname = lname
+
+#   def printname(self):
+#     print(self.firstname, self.lastname)
+
+# class Student(Person):
+#   def __init__(self, fname, lname,year):
+#     self.graduationyear = year
+#     super().__init__(fname, lname)
+#   def printname(self):
+#      print(self.firstname, self.lastname,self.graduationyear)
+    
+
+# x = Student("Mike", "Olsen","2019")
+# x.printname()
+
+              
+        
 
 
 

@@ -35,21 +35,30 @@ class calculator:
             print('the div value is :',self.div())
     
 class main(calculator):
-    def __init__(self) -> None:
+    def define(self):
         while True:
-            cal = calculator()
-            cal.QuestionPrint()
+            # cal = calculator()
+            calculator.QuestionPrint(self)
+            ## super().QuestionPrint()
+            # cal.QuestionPrint()
             try:
                 op=int(input('select operation:' ))
                 if op in (1,2,3,4,5):
                     if(op==5):
                         break
-                    cal.input()
+                    calculator.input(self)
+                    ## super().input()
+                    # cal.input()
                 else:
                     print('invalid input')
             except:
                 print('invalid choice')
                 continue
-            cal.FinalCalc(op)
+            calculator.FinalCalc(self, op)
+            ## super().FinalCalc(op)
+            # cal.FinalCalc(op)
 
-main()
+M = main()
+# c=calculator()
+# M.QuestionPrint()
+M.define()
